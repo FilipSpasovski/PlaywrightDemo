@@ -24,7 +24,8 @@
 
 *Add Required Environment Variables*
 * Open the .env file and add the required environment variables. These are typically user-specific values such as usernames, passwords. Example:
-	```USER_EMAIL="your_email@example.com"
+	```
+	   USER_EMAIL="your_email@example.com"
 	   USER_PASSWORD="your_secure_password" 	
 	```
 
