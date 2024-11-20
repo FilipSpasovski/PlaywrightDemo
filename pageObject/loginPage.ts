@@ -23,16 +23,16 @@ export class LoginPage {
    
   }
 
-  // Method to navigate to the login page
+  
   async navigate() {
     await this.page.goto('https://university.engenious.io');
   }
 
-  // Method to log in
+  
   async login(username: string, password: string) {
     await this.signInButton.click();
     await this.loginLink.click();
-    await this.usernameInput.fill(username);
+    await this.usernameInput.type(username, { delay: 100 } );
     await this.passwordInput.fill(password);
     await this.loginButton.click();
     await this.burgerMenu.click();

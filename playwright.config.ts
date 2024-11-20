@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
 
 /**
  * Read environment variables from file.
@@ -11,6 +12,8 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
+dotenv.config();
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -78,3 +81,7 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
+
+console.log(process.env.USER_EMAIL); // Prints the username from .env
+console.log(process.env.USER_PASSWORD); // Prints the password from .env
