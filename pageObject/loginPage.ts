@@ -8,8 +8,6 @@ export class LoginPage {
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
   readonly burgerMenu: Locator;
-  
-  
 
   constructor(page: Page) {
     this.page = page;
@@ -19,16 +17,10 @@ export class LoginPage {
     this.passwordInput = page.locator('input[name="password"]'); 
     this.loginButton = page.locator('button[type="submit"]'); 
     this.burgerMenu = page.locator('div.Header_innerBurger__1xZ84');
-    
-   
   }
-
-  
   async navigate() {
     await this.page.goto('https://university.engenious.io');
-  }
-
-  
+  }  
   async login(username: string, password: string) {
     await this.signInButton.click();
     await this.loginLink.click();
@@ -36,6 +28,5 @@ export class LoginPage {
     await this.passwordInput.fill(password);
     await this.loginButton.click();
     await this.burgerMenu.click();
-   
   }
 }
