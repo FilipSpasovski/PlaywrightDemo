@@ -18,9 +18,11 @@ export class LoginPage {
     this.loginButton = page.locator('button[type="submit"]'); 
     this.burgerMenu = page.locator('div.Header_innerBurger__1xZ84');
   }
+
   async navigate() {
     await this.page.goto('https://university.engenious.io');
-  }  
+  }
+    
   async login(username: string, password: string) {
     await this.signInButton.click();
     await this.loginLink.click();
