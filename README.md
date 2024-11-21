@@ -9,6 +9,7 @@
 
 ## Project setup
 *Clone the project in a desired location*
+
 *Open the project in VS Code and open terminal*
 
 
